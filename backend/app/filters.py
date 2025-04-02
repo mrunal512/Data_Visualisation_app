@@ -5,7 +5,7 @@ def apply_filters(records, filters):
         for f in filters:
             filter_source = f.get("source")
             if filter_source and record.get("source") != filter_source:
-                continue  # apply only filters relevant to the record's source
+                continue  
 
             field = f["field"]
             operator = f["operator"]

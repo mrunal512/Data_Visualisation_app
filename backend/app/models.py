@@ -11,8 +11,8 @@ class Task(Base):
     __tablename__ = "tasks"
     id = Column(String, primary_key=True, index=True)
     status = Column(String)
-    sources = Column(JSON)  # Store selected data sources
-    filters = Column(JSON)  # Store filter parameters
+    sources = Column(JSON)  
+    filters = Column(JSON)  
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, onupdate=datetime.utcnow)
     records = relationship("Record", back_populates="task")
@@ -21,7 +21,7 @@ class Record(Base):
     __tablename__ = "records"
     id = Column(Integer, primary_key=True, index=True)
     task_id = Column(String, ForeignKey("tasks.id"))
-    source = Column(String)  # Track which source (A or B)
+    source = Column(String)  
     data = Column(JSON)
     created_at = Column(DateTime, default=datetime.utcnow)
     task = relationship("Task", back_populates="records")

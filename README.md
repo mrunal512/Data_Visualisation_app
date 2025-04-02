@@ -101,7 +101,7 @@ npm run dev
 
 ### Creating a Task
 ```json
-POST /tasks
+POST tasks
 {
   "filters": [
     {

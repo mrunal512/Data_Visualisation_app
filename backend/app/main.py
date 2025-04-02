@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.tasks import create_task, get_task_status, get_task_data, get_source_fields
 from fastapi import Request
+from app.job_queue import job_queue
 
 
 app = FastAPI()
@@ -41,3 +42,8 @@ async def get_fields():
             "status": "error",
             "message": str(e)
         }
+
+@app.on_event("startup")
+async def startup_event():
+    """Start the job queue on application startup"""
+    job_queue.start_processing()

@@ -37,36 +37,32 @@ export default function SalesByCompany({ records }) {
 
   useEffect(() => {
     const filteredRecords = records.filter(r => {
-      // Check if record has the selected field
+      
       const hasField = r[groupField] !== undefined && r[groupField] !== null;
+
       if (!hasField) return false;
 
-      // Check if value matches selected filter
-      const matchesValue = filter.fieldValue ? 
-        (r[groupField] === filter.fieldValue) : true;
-
-      // Date range filtering
-      const recordDate = new Date(r[dateField]);
+      const matchesLocation = filter.fieldValue ? r.location === filter.fieldValue : true;
+      const recordDate = new Date(r.date);
       const startDate = filter.startDate ? new Date(filter.startDate) : new Date("1900-01-01");
       const endDate = filter.endDate ? new Date(filter.endDate) : new Date("2100-12-31");
       const matchesDate = recordDate >= startDate && recordDate <= endDate;
-
-      return matchesValue && matchesDate;
+      return matchesLocation && matchesDate;
     });
 
-    // Group the filtered records
+    console.log("Filtered Records:", filteredRecords);
+
     const groupedField = d3.rollup(
       filteredRecords,
       v => v.length,
-      d => d[groupField] || "Unknown"
+      d => d[groupField] || d.name || "Unknown"
     );
-
     setGroupedByField(Array.from(groupedField, ([label, count]) => ({
       label,
       count
     })));
 
-    // ...rest of your existing grouping code for dates
+    
     const groupedDate = d3.rollup(
       filteredRecords,
       v => v.length,

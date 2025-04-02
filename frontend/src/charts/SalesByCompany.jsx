@@ -36,35 +36,37 @@ export default function SalesByCompany({ records }) {
   });
 
   useEffect(() => {
-    // Apply dynamic filters
     const filteredRecords = records.filter(r => {
-      
+      // Check if record has the selected field
       const hasField = r[groupField] !== undefined && r[groupField] !== null;
-
       if (!hasField) return false;
 
-      const matchesLocation = filter.fieldValue ? r.location === filter.fieldValue : true;
-      const recordDate = new Date(r.date);
+      // Check if value matches selected filter
+      const matchesValue = filter.fieldValue ? 
+        (r[groupField] === filter.fieldValue) : true;
+
+      // Date range filtering
+      const recordDate = new Date(r[dateField]);
       const startDate = filter.startDate ? new Date(filter.startDate) : new Date("1900-01-01");
       const endDate = filter.endDate ? new Date(filter.endDate) : new Date("2100-12-31");
       const matchesDate = recordDate >= startDate && recordDate <= endDate;
-      return matchesLocation && matchesDate;
+
+      return matchesValue && matchesDate;
     });
 
-    console.log("Filtered Records:", filteredRecords);
-
-    // Group by field with proper undefined handling
+    // Group the filtered records
     const groupedField = d3.rollup(
       filteredRecords,
       v => v.length,
-      d => d[groupField] || d.name || "Unknown" // Use fallback field or "Unknown"
+      d => d[groupField] || "Unknown"
     );
+
     setGroupedByField(Array.from(groupedField, ([label, count]) => ({
       label,
       count
     })));
 
-    // Group by date
+    // ...rest of your existing grouping code for dates
     const groupedDate = d3.rollup(
       filteredRecords,
       v => v.length,
@@ -114,7 +116,7 @@ export default function SalesByCompany({ records }) {
   };
 
   const renderBarChart = () => {
-    // Create scales
+    
     const xScale = d3.scaleBand()
       .domain(groupedByField.map(d => d.label))
       .range([0, CHART_WIDTH])
@@ -215,7 +217,7 @@ export default function SalesByCompany({ records }) {
   };
 
   const renderLineChart = () => {
-    // Create scales
+    
     const xScale = d3.scalePoint()
       .domain(groupedByDate.map(d => d.year))
       .range([0, CHART_WIDTH])
@@ -226,7 +228,7 @@ export default function SalesByCompany({ records }) {
       .range([CHART_HEIGHT, 0])
       .nice();
 
-    // Create line generator
+    
     const line = d3.line()
       .x(d => xScale(d.year))
       .y(d => yScale(d.count))

@@ -1,0 +1,17 @@
+name,location,date,type,transport_mode,daily_riders
+Central,Los Angeles,2024-07-20,Transport,Subway,120000
+Downtown,Portland,2024-08-05,Transport,Bus,45000
+Uptown,New Orleans,2024-06-15,Transport,Tram,30000
+Midtown,Los Angeles,2024-07-20,Transport,Bus,60000
+Sunset Terminal,Los Angeles,2023-11-12,Transport,Light Rail,75000
+Echo Park Hub,Los Angeles,2021-04-18,Transport,Bus,50000
+Union Point,Portland,2023-09-21,Transport,Tram,32000
+Riverside Station,Portland,2022-05-10,Transport,Light Rail,28000
+Crescent Bay,New Orleans,2023-03-25,Transport,Subway,22000
+Jazz Square,New Orleans,2021-06-07,Transport,Bus,18000
+Central North,New Orleans,2019-09-30,Transport,Ferry,12000
+Broadway Stop,Portland,2020-12-02,Transport,Bus,30000
+Mission Terminal,San Francisco,2022-07-14,Transport,Subway,95000
+Golden Bay,San Francisco,2021-10-19,Transport,Tram,40000
+Civic Center,San Francisco,2020-03-28,Transport,Bus,52000
+Downtown East,Los Angeles,2022-08-22,Transport,Tram,88000

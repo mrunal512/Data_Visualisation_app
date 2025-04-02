@@ -1,0 +1,131 @@
+[ 
+  {
+    "festival_name": "Soundscape",
+    "location": "Los Angeles",
+    "date": "2024-07-20",
+    "genre": "Electronic",
+    "attendance": 25000,
+    "headliner": "DJ Nova",
+    "type": "Festival"
+  },
+  {
+    "festival_name": "JazzFest",
+    "location": "New Orleans",
+    "date": "2024-06-15",
+    "genre": "Jazz",
+    "attendance": 40000,
+    "headliner": "Miles Redux"
+  },
+  {
+    "festival_name": "Rock Haven",
+    "location": "Chicago",
+    "date": "2023-09-12",
+    "genre": "Rock",
+    "attendance": 45000,
+    "headliner": "The Thunder"
+  },
+  {
+    "festival_name": "SynthStorm",
+    "location": "San Francisco",
+    "date": "2022-11-03",
+    "genre": "Synthwave",
+    "attendance": 22000,
+    "headliner": "Neon Pulse"
+  },
+  {
+    "festival_name": "Country Roots",
+    "location": "Nashville",
+    "date": "2021-05-28",
+    "genre": "Country",
+    "attendance": 37000,
+    "headliner": "Lila Grace"
+  },
+  {
+    "festival_name": "HipHop Heights",
+    "location": "Atlanta",
+    "date": "2020-10-10",
+    "genre": "Hip-Hop",
+    "attendance": 60000,
+    "headliner": "MC Blaze"
+  },
+  {
+    "festival_name": "Reggae Rhythms",
+    "location": "Miami",
+    "date": "2019-07-19",
+    "genre": "Reggae",
+    "attendance": 18000,
+    "headliner": "Rasta Vibe"
+  },
+  {
+    "festival_name": "Folk Forest",
+    "location": "Seattle",
+    "date": "2023-06-23",
+    "genre": "Folk",
+    "attendance": 25000,
+    "headliner": "Willow & Oak"
+  },
+  {
+    "festival_name": "Metal Mayhem",
+    "location": "Detroit",
+    "date": "2021-08-14",
+    "genre": "Metal",
+    "attendance": 32000,
+    "headliner": "Iron Claw"
+  },
+  {
+    "festival_name": "Pop Paradise",
+    "location": "Las Vegas",
+    "date": "2025-03-09",
+    "genre": "Pop",
+    "attendance": 55000,
+    "headliner": "Stella Ray"
+  },
+  {
+    "festival_name": "Ambient Air",
+    "location": "Denver",
+    "date": "2022-04-21",
+    "genre": "Ambient",
+    "attendance": 12000,
+    "headliner": "Echo Drift"
+  }, 
+  {
+    "festival_name": "Pacific Pulse",
+    "location": "Seattle",
+    "date": "2021-07-30",
+    "genre": "Indie Rock",
+    "attendance": 27000,
+    "headliner": "North Sound"
+  },
+  {
+    "festival_name": "Northern Lights Music Fest",
+    "location": "Seattle",
+    "date": "2019-08-20",
+    "genre": "Pop Rock",
+    "attendance": 31000,
+    "headliner": "The Starbirds"
+  },
+  {
+    "festival_name": "SynthStorm",
+    "location": "San Francisco",
+    "date": "2022-11-03",
+    "genre": "Synthwave",
+    "attendance": 22000,
+    "headliner": "Neon Pulse"
+  },
+  {
+    "festival_name": "Bay Beats",
+    "location": "San Francisco",
+    "date": "2020-03-17",
+    "genre": "Electro Pop",
+    "attendance": 26000,
+    "headliner": "Vapor Sky"
+  },
+  {
+    "festival_name": "Golden Gate Jam",
+    "location": "San Francisco",
+    "date": "2019-05-22",
+    "genre": "Alternative",
+    "attendance": 18000,
+    "headliner": "Echo Nova"
+  }
+]
